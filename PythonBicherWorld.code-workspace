@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"todo-tree.tree.scanMode": "workspace only",
+		"jupyter.kernels.filter": [],
+		"todo-tree.tree.showCountsInTree": true,
+		"todo-tree.tree.showBadges": false,
+		"todo-tree.tree.disableCompactFolders": true,
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.autopep8"
+		},
+		"python.formatting.provider": "none"
+	},
+	"extensions": {
+		"recommendations": []
+	}
+}

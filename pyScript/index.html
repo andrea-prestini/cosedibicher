@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <style>
+        body {
+            padding: 20px;
+            font-size: 30px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        h2 {
+            color: yellow;
+            border: 4px solid green;
+            padding: 20px;
+            background-color: olivedrab;
+        }
+
+        #divInfo {
+            color: red;
+            border: 1px solid blueviolet;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova utilizzo PyScript</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<py-env>
+    - numpy
+</py-env>
+
+<body>
+    <h1 id="titolo"></h1>
+    <py-script>
+        pyscript.write("titolo", "Ciao mondo con titolo da codice python!")
+    </py-script>
+    <py-script src="./index.py" output="divInfo"> </py-script>
+
+    <h2>Titolo del div destinazione</h2>
+    <div id="divInfo"></div>
+</body>
+
+</html

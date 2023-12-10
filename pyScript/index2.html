@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <style>
+        body {
+            padding: 20px;
+            font-size: 30px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        h2 {
+            color: yellow;
+            border: 4px solid green;
+            padding: 20px;
+            background-color: olivedrab;
+        }
+
+        #funzione {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: red;
+            border: 1px solid blueviolet;
+        }
+
+        #saluti {
+            display: inline-table;
+            margin: 10px 30px 10px 10px ;
+            padding: 25px 40px 25px 30px;
+            background-color: burlywood;
+        }
+        
+        .scheda {
+            width: 35%;
+            display: inline-block;
+            padding: 10px 10px 10px 10px;
+            background-color: royalblue;
+            color: yellow;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova utilizzo PyScript</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+
+    <py-env>
+      - paths:
+        - ./index.py
+        - ./persone.py
+    </py-env>
+
+</head>
+
+
+<body>
+<h1>Titolo principale della nostra pagina</h1>
+
+<div>
+    <p>primo elemento div</p>
+    <p>secondo elemento div</p>
+</div>
+<div id="funzione"></div>
+<div id="saluti"></div>
+
+<div id="persona1" class="scheda"></div>
+<br>
+<div id="persona2" class="scheda"></div>
+
+<!------------------------------------ py script legati ad id tag --------------------------->
+<py-script output="funzione">
+    from index import miafunzione
+    miafunzione(2, 10)
+</py-script>
+
+<py-script output="saluti">
+for i in range(10):
+    print(f'''
+    ciao amico {i}
+    benvenuto tra noi!''')
+</py-script>
+
+<py-script> 
+    import persone as per
+    uno = per.Persona("andrea", "prestini", "esine")
+    due = per.Persona("eleonora", "favagrossa", "breno")
+</py-script>
+<py-script output="persona1"> 
+    uno.scheda()
+</py-script>
+<py-script output="persona2"> 
+    due.scheda()
+</py-script>
+    
+
+
+
+
+</body>
+
+</html
