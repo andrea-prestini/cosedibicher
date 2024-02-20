@@ -1,1 +1,5 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 *.ipynb_checkpoints
