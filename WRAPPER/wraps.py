@@ -1,13 +1,16 @@
 import time
 from functools import wraps
 
+
 def log_calls(func):
     fname = func.__name__
+
     @wraps(func)
     def logger(*args, **kwargs):
         print(fname, 'chiamata')
         return func(*args, **kwargs)
     return logger
+
 
 @log_calls
 def add(x, y):
@@ -15,7 +18,7 @@ def add(x, y):
     return x + y
 
 
-print(add(1,1))
+print(add(1, 1))
 print(add.__doc__)
 print(add.__module__)
 
@@ -32,6 +35,7 @@ def my_caps_lock(funzione_parametro):
 def mia_funzione():
     return "hello world!"
 
+
 def caps_lock(funzione_parametro):
     @wraps(funzione_parametro)
     def wrapper(*args, **kwargs):
@@ -46,9 +50,6 @@ def echo(msg):
 
 
 # ----------------------------------------------------------------------
-
-import time
-from functools import wraps
 
 
 def decoratore(func):
