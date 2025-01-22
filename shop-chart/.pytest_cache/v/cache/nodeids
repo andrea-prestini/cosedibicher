@@ -1,0 +1,6 @@
+[
+  "test_shopping_cart.py::test_can_add_item_to_cart",
+  "test_shopping_cart.py::test_can_get_total_price",
+  "test_shopping_cart.py::test_when_add_more_than_max_items_should_fail",
+  "test_shopping_cart.py::test_when_item_added_then_cart_contains_item"
+]
